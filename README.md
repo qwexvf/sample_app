@@ -39,3 +39,15 @@ $ rails server
 
 詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
 を参考にしてください。
+
+#追記
+yarn add jquery
+
+//= require rails-ujs
+//= require turbolinks
+//= jquery
+//= require_tree .
+
+rake yarn:install
+
+gem 'jquery-rails'
