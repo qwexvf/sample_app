@@ -1,3 +1,47 @@
+# 追記
+ 開発環境
+ ```
+ OS: Arch Linux (Linux arch 4.16.9-1)
+ Editor: Neovim (0.2.2)
+ Ruby: 2.5.1
+ yarn: 1.6.0
+ node: 10.1.0
+ ```
+
+Gamefileに追加
+
+```
+gem 'jquery-rails'
+```
+
+jqueryを追加
+
+```Bash
+$ yarn add jquery
+```
+
+application.jsを編集
+
+```
+// app/assets/javascripts/application.js
+...
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require jquery
+//= require bootstrap
+//= require_tree .
+```
+
+rakeコマンドを実行する
+
+```Bash
+$ rake yarn:install
+```
+
+[View demo on Heroku](https://limitless-fortress-44842.herokuapp.com/)
+
+
 # Ruby on Rails チュートリアルのサンプルアプリケーション
 
 これは、次の教材で作られたサンプルアプリケーションです。   
@@ -39,39 +83,4 @@ $ rails server
 
 詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
 を参考にしてください。
-
-
-#追記
-Gamefileに追加
-
-```
-gem 'jquery-rails'
-```
-
-jqueryを追加
-
-```
-$ yarn add jquery
-```
-
-application.jsを編集
-
-```
-// app/assets/javascripts/application.js
-...
-//= require rails-ujs
-//= require activestorage
-//= require turbolinks
-//= require jquery
-//= require bootstrap
-//= require_tree .
-```
-
-rakeコマンドを実行する
-
-```
-$ rake yarn:install
-```
-
-[View demo on Heroku](https://limitless-fortress-44842.herokuapp.com/)
 
