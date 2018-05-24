@@ -40,14 +40,35 @@ $ rails server
 詳しくは、[*Ruby on Rails チュートリアル*](https://railstutorial.jp/)
 を参考にしてください。
 
+
 #追記
-yarn add jquery
+Gamefileに追加
 
-//= require rails-ujs
-//= require turbolinks
-//= jquery
-//= require_tree .
-
-rake yarn:install
-
+```
 gem 'jquery-rails'
+```
+
+jqueryを追加
+
+```
+$ yarn add jquery
+```
+
+application.jsを編集
+
+```
+// app/assets/javascripts/application.js
+...
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require jquery
+//= require bootstrap
+//= require_tree .
+```
+
+rakeコマンドを実行する
+
+```
+$ rake yarn:install
+```
